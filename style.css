@@ -1,0 +1,32 @@
+#container{
+    background-image: url(images/Picture3.png);
+    height: auto;
+    width: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#container img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    height:160px;
+}
+
+.window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#stats{
+    background-color: black;
+    border: 4px yellow solid;
+    width: 754px;
+    height: 150px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
