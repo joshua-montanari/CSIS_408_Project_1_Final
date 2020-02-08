@@ -1,5 +1,5 @@
 #container{
-    background-image: url(images/Picture3.png);
+    background-image: url(images/batman.gif);
     height: auto;
     width: 100%;
     background-position: center;
@@ -15,6 +15,12 @@
     height:160px;
 }
 
+#score{
+  float: left;
+}
+#life{
+  float: right;
+}
 .window {
     display: flex;
     justify-content: center;
@@ -29,4 +35,68 @@
     margin-left: auto;
     margin-right: auto;
     color: white;
+}
+
+.bg-bat{
+  background-image: url(images/batman.gif);
+    height: 850px;
+    width: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+.title{
+  color: yellow;
+  font-weight: bold;
+}
+
+.gap{
+  height: 10vh;
+}
+.gap5{
+  height: 5vh;;
+}
+
+.mg-top{
+  height: 35vh;
+}
+
+.difficulty{
+  color: yellow;
+  cursor: pointer;
+}
+
+.left-btn{
+  color: yellow;
+  cursor: pointer;
+}
+
+.left-btn:hover {
+  color: darkgoldenrod;
+}
+
+.scores{
+  font-size: 8vh;
+  color: yellow;
+}
+
+.win{
+  font-size: 10vh;
+  color: white;
+}
+
+.stats{
+  font-size: 5vh;
+  color: gold;
+  cursor: pointer;
+}
+
+.stats:hover {
+  color: darkgoldenrod;
+}
+
+.right-control{
+  color: white;
 }

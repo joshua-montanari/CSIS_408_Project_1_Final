@@ -11,6 +11,7 @@ var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
 
+var lives= 5;
 var score = 0;
 
 var brickRowCount = 5;
@@ -20,6 +21,19 @@ var brickHeight = 20;
 var brickPadding = 5;
 var brickOffsetTop = 20;
 var brickOffsetLeft = 20;
+
+//change difficulty
+function difficultySelect(rowCount, columnCount, padding, width){
+    brickRowCount = rowCount;
+    brickColumnCount = columnCount;
+    brickWidth = width;
+    brickPadding = padding;
+    console.log('function is called')
+    console.log(brickRowCount)
+    return brickRowCount, brickColumnCount, brickWidth, brickPadding
+}
+
+console.log(brickRowCount)
 
 var bricks = [];
 for (var c = 0; c < brickColumnCount; c++) {
@@ -31,6 +45,7 @@ for (var c = 0; c < brickColumnCount; c++) {
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
 
 function keyDownHandler(e) {
     if (e.key == "Right" || e.key == "ArrowRight") {
@@ -50,27 +65,40 @@ function keyUpHandler(e) {
     }
 }
 
-var lives= 3;
+function mouseMoveHandler(e) {
+    var relativeX = e.clientX - canvas.offsetLeft;
+    if(relativeX > 0 && relativeX < canvas.width) {
+        paddleX = relativeX - paddleWidth/2;
+    }
+}
+
+
 function playerLives() {
    
     if (lives !== 1){
           lives = lives - 1;
         document.getElementById("life").innerHTML = "Lives: " + lives; 
-      
+        
     }
     
     else { 
         document.getElementById("life").innerHTML = "Lives: " + lives; 
         //window.alert("Game Over");
+        window.location.replace("lose.html");
         
     }
    
 }
 
-
+//brickColumnCount * brickRowCount)* 100
 
 function playerScore(){
     score = score + 100;
+    if(score >= (brickColumnCount * brickRowCount)* 100){
+        //document.querySelector('winLives') = "Lives Left: " + lives;
+        //document.querySelector('winScore') = "Score: " + score;
+        window.location.replace("win.html");
+    }
     document.getElementById("score").innerHTML = "Score: " + score;
 }
 
