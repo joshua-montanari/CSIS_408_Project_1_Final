@@ -1,102 +1,107 @@
 #container{
-    background-image: url(images/batman.gif);
-    height: auto;
-    width: 100%;
-    background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(images/batman.gif);
+  height: auto;
+  width: 100%;
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 #container img{
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-    height:160px;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+  height:160px;
 }
 
 #score{
-  float: left;
+float: left;;
 }
 #life{
-  float: right;
+float: right;
+}
+#diff{
+text-align: center;
+color: gold;
 }
 .window {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #stats{
-    background-color: black;
-    border: 4px yellow solid;
-    width: 754px;
-    height: 150px;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
+  background-color: black;
+  border: 4px yellow solid;
+  width: 754px;
+  height: 150px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
 }
 
 .bg-bat{
-  background-image: url(images/batman.gif);
-    height: 850px;
-    width: 100%;
-    background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
+background-image: url(images/batman.gif);
+  height: 850px;
+  width: 100%;
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+display: block;
 }
 
 .title{
-  color: yellow;
-  font-weight: bold;
+color: yellow;
+font-weight: bold;
 }
 
 .gap{
-  height: 10vh;
+height: 10vh;
 }
 .gap5{
-  height: 5vh;;
+height: 5vh;;
 }
 
 .mg-top{
-  height: 35vh;
+height: 35vh;
 }
 
 .difficulty{
-  color: yellow;
-  cursor: pointer;
+color: yellow;
+cursor: pointer;
 }
 
 .left-btn{
-  color: yellow;
-  cursor: pointer;
+color: yellow;
+cursor: pointer;
+font-size: 3.5em;
 }
 
 .left-btn:hover {
-  color: darkgoldenrod;
+color: darkgoldenrod;
 }
 
 .scores{
-  font-size: 8vh;
-  color: yellow;
+font-size: 8vh;
+color: yellow;
 }
 
 .win{
-  font-size: 10vh;
-  color: white;
+font-size: 10vh;
+color: white;
 }
 
 .stats{
-  font-size: 5vh;
-  color: gold;
-  cursor: pointer;
+font-size: 5vh;
+color: gold;
+cursor: pointer;
 }
 
 .stats:hover {
-  color: darkgoldenrod;
+color: darkgoldenrod;
 }
 
 .right-control{
-  color: white;
+color: white;
 }
