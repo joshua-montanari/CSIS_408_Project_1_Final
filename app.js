@@ -26,6 +26,16 @@ var brickPadding = 5;
 var brickOffsetTop = 20;
 var brickOffsetLeft = 20;
 
+//brick audio
+var Hitaudio = document.createElement('audio');
+Hitaudio.src='/music/hit.mp3'
+Hitaudio.volume = 1
+
+//win audio --not working--
+var winaudio = document.createElement('audio');
+winaudio.src='/music/winSound.mp3'
+winaudio.volume = 1
+
 //change difficulty
 var difficulty = prompt("Select Difficulty: Easy, Medium, Hard");
 
@@ -108,7 +118,9 @@ function playerLives() {
 function playerScore(){
     score = score + 100;
     if(score >= (brickColumnCount * brickRowCount)* 100){
+        
         window.location.replace("win.html");
+        winaudio.play()
     }
     document.getElementById("score").innerHTML = "Score: " + score;
 }
@@ -122,6 +134,7 @@ function collisionDetection() {
                 if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
                     dy = -dy;
                     b.status = 0;
+                    Hitaudio.play()
                     playerScore();
                 }
             }
