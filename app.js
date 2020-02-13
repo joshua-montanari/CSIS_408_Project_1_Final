@@ -45,8 +45,11 @@ if (difficulty == 'Medium' || difficulty == 'medium'){
 }else if (difficulty == 'Hard' || difficulty == 'hard'){
     document.getElementById("diff").innerHTML = 'Hard Mode'
     difficultySelect(5, 9, 5, 80, 20);
-}else{
+}else if (difficulty =='Easy' || difficulty == 'easy'){
     document.getElementById("diff").innerHTML = 'Easy Mode'
+    difficultySelect(1, 5, 10, 135, 40)
+}else{
+    document.getElementById("diff").innerHTML = 'Command not recognized. Default: Easy Mode'
     difficultySelect(1, 5, 10, 135, 40)
 }
 
