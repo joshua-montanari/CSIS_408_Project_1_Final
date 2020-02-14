@@ -156,3 +156,8 @@ color: white;
   .lose-btn:hover{
     color: firebrick;
   }
+
+  .lose{
+    font-size: 10vh;
+    color: red;
+    }
